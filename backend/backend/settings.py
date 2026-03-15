@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 # django-drf-next/backend
 BASE_DIR = Path(__file__).resolve().parent.parent
 # in production it will be in comment
-# load_dotenv(BASE_DIR / '.env')
+load_dotenv(BASE_DIR / '.env')
 
 
 # Quick-start development settings - unsuitable for production
@@ -137,7 +137,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "/static/"
+# django-drf-next/backend/
+STATIC_ROOT = os.path.join(BASE_DIR, ".sysdata")
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 
 AUTH_USER_MODEL = "user.User"
