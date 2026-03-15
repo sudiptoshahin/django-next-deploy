@@ -18,8 +18,9 @@ from dotenv import load_dotenv
 # django-drf-next/backend
 BASE_DIR = Path(__file__).resolve().parent.parent
 # in production it will be in comment
-load_dotenv(BASE_DIR / '.env')
-
+DEBUG = os.environ.get("DEBUG", "True") == "True"
+if DEBUG is True:
+    load_dotenv(BASE_DIR / '.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
@@ -144,6 +145,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, ".sysdata")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 
 AUTH_USER_MODEL = "user.User"
