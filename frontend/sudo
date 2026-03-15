@@ -1,0 +1,24 @@
+Netid State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                            
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*    users:(("chrome",pid=5490,fd=159))
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*    users:(("chrome",pid=5490,fd=140))
+udp   UNCONN 0      0        224.0.0.251:5353       0.0.0.0:*    users:(("chrome",pid=5441,fd=600))
+udp   UNCONN 0      0            0.0.0.0:5353       0.0.0.0:*                                      
+udp   UNCONN 0      0         127.0.0.54:53         0.0.0.0:*                                      
+udp   UNCONN 0      0      127.0.0.53%lo:53         0.0.0.0:*                                      
+udp   UNCONN 0      0            0.0.0.0:35950      0.0.0.0:*                                      
+udp   UNCONN 0      0               [::]:5353          [::]:*                                      
+udp   UNCONN 0      0               [::]:47903         [::]:*                                      
+tcp   LISTEN 0      10         127.0.0.1:8000       0.0.0.0:*    users:(("python",pid=25278,fd=3)) 
+tcp   LISTEN 0      511        127.0.0.1:5820       0.0.0.0:*    users:(("code",pid=15389,fd=39))  
+tcp   LISTEN 0      511        127.0.0.1:38201      0.0.0.0:*    users:(("code",pid=7089,fd=65))   
+tcp   LISTEN 0      200        127.0.0.1:5432       0.0.0.0:*                                      
+tcp   LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*                                      
+tcp   LISTEN 0      511        127.0.0.1:4061       0.0.0.0:*    users:(("code",pid=4895,fd=39))   
+tcp   LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*                                      
+tcp   LISTEN 0      128          0.0.0.0:22         0.0.0.0:*                                      
+tcp   LISTEN 0      511        127.0.0.1:33951      0.0.0.0:*    users:(("code",pid=4263,fd=69))   
+tcp   LISTEN 0      4096       127.0.0.1:631        0.0.0.0:*                                      
+tcp   LISTEN 0      511        127.0.0.1:41983      0.0.0.0:*    users:(("code",pid=14815,fd=72))  
+tcp   LISTEN 0      128             [::]:22            [::]:*                                      
+tcp   LISTEN 0      511                *:80               *:*                                      
+tcp   LISTEN 0      4096           [::1]:631           [::]:*                                      
