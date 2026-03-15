@@ -34,7 +34,7 @@ SECRET_KEY_FALLBACKS = [
 DEBUG = os.environ.get('DEBUG')
 # Add slash('/') after the url
 APPEND_SLASH=False
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', "192.168.0.105"]
 # ALLOWED_HOSTS = ['www.yourdomain.com', 'yourdomain.com']
 
 
