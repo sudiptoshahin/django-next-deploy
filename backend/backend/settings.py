@@ -17,16 +17,14 @@ from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # django-drf-next/backend
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(BASE_DIR / '.env')
+# in production it will be in comment
+# load_dotenv(BASE_DIR / '.env')
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
-print('___test___', os.environ.get('SECRET_KEY'))
-
 SECRET_KEY = os.environ.get('SECRET_KEY')
 SECRET_KEY_FALLBACKS = [
     os.environ.get('OLD_SECRET_KEY')
