@@ -1,0 +1,13 @@
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/var/www/django-next-deploy/backend
+# Point to your .env file path
+EnvironmentFile=/etc/django-config/backend.env
+# OR define them manually:
+# Environment="DEBUG=False"
+# Environment="SECRET_KEY=your-secret-key"
+ExecStart=/var/www/django-next-deploy/env/bin/gunicorn \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          backend.wsgi:application
