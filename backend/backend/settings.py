@@ -31,8 +31,6 @@ SECRET_KEY_FALLBACKS = [
     os.environ.get('OLD_SECRET_KEY')
 ]
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG')
 # Add slash('/') after the url
 APPEND_SLASH=False
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', "192.168.0.105", "192.168.100.75"]
@@ -143,9 +141,8 @@ STATICFILES_FINDERS = [
 
 STATIC_URL = "/static/"
 # django-drf-next/backend/
+STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / ".sysdata"
-
-STATICFILES_DIRS = [BASE_DIR / "static"]  # your custom static files
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
