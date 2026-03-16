@@ -15,7 +15,7 @@ export default function LoginPage() {
     const router = useRouter();
 
     async function login(payload: LoginPayload) {
-        const url = process.env.NEXT_PUBLIC_API_BASE_URL + '/auth/login/';
+        const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/login/`;
         try {
             const { data } = await axios.post(url, payload);
             if (data.hasOwnProperty('access')) {
