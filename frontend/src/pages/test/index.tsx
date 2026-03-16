@@ -2,8 +2,13 @@ import { useEffect, useState } from "react";
 import { deleteCookie, getCookie, setCookie } from 'cookies-next';
 import axios from "axios";
 
+interface User {
+    username: string;
+    role: string;
+}
+
 export default function Test() {
-    const [users, setUsers] = useState();
+    const [users, setUsers] = useState<User[]>([]);
 
     async function getUser() {
         const token = getCookie("access-token");
@@ -34,7 +39,7 @@ export default function Test() {
             <div className="">
                 <ul>
                     {
-                        users.map(user => (
+                        Boolean(users) && users.length > 0 && users.map(user => (
                             <li>{" > "}{user.username} ({user.role})</li>
                         ))
                     }
