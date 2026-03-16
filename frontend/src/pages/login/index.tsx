@@ -31,6 +31,7 @@ export default function LoginPage() {
     }
 
     const handleLogin = () => {
+        console.log('___clicked____');
         if (!username || !password) {
             alert("Please fill in all fields.");
             return;
