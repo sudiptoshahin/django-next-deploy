@@ -14,6 +14,8 @@ export default function LoginPage() {
     const [loading, setLoading] = useState(false);
     const router = useRouter();
 
+    console.log('__env___', process.env.NEXT_PUBLIC_API_BASE_URL);
+
     async function login(payload: LoginPayload) {
         const url = `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/login/`;
         try {
