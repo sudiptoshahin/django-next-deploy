@@ -1,0 +1,22 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=sudipto
+Group=www-data
+WorkingDirectory=/var/www/django-next-deploy/backend
+EnvironmentFile=/etc/django-config/backend.env
+
+# ADD THESE TWO LINES:
+RuntimeDirectory=gunicorn
+RuntimeDirectoryMode=0775
+
+# UPDATE THE BIND PATH to /run/gunicorn/gunicorn.sock
+ExecStart=/var/www/django-next-deploy/env/bin/gunicorn \
+          --workers 3 \
+          --bind unix:/run/gunicorn/gunicorn.sock \
+          backend.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,22 @@
+[Unit]
+Description=Next.js Frontend Service
+After=network.target
+
+[Service]
+Type=simple
+User=sudipto
+Group=www-data
+# WorkingDirectory=/var/www/django-next-deploy/frontend/.next/standalone
+WorkingDirectory=/var/www/django-next-deploy/frontend/.next/standalone
+EnvironmentFile=/etc/django-config/frontend.env
+
+ExecStart=/home/sudipto/.nvm/versions/node/v20.20.1/bin/node server.js
+
+Restart=always
+RestartSec=5
+PrivateTmp=true
+ProtectSystem=full
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
